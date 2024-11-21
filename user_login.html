@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <style>
+        bodys {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-content-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 400px;
+            position: absolute;
+            margin-right: -1000px;
+        }
+
+        .text-hr-title {
+            font-size: 30px;
+
+        }
+
+        .message-box {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .text-hr-fail {
+            color: red;
+            font-size: 12px;
+            margin-top: 12px;
+            display: inline-block;
+        }
+
+        .el-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .el-form-item {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .el-form-item__content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-input {
+            width: 352px;
+            position: relative;
+        }
+
+        .el-input__inner {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .el-input--suffix .el-input__suffix-inner {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .captcha-img {
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .el-button {
+            width: 352px;
+            padding: 12px;
+            background-color: #409eff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 32px;
+        }
+
+        .el-button--primary {
+            background-color: #409eff;
+        }
+
+        .footer-links {
+            font-size: 14px;
+        }
+
+        .text-hr-orange {
+            color: orange;
+            cursor: pointer;
+        }
+
+        .float-right {
+            float: right;
+        }
+        .foot{
+            margin-top:250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<bodys>
+<img src="img/user_login.png" width="1680" height="900">
+<div class="login-content-box">
+    <div class="text-hr-title">序列号密码登录</div>
+    <div class="message-box"><span class="text-hr-fail"></span></div>
+    <form class="el-form form-block general-popper el-form--inline">
+        <div class="el-form-item block is-required">
+            <div class="el-form-item__content">
+                <div class="serial-input form-input el-input">
+                    <input type="text" autocomplete="on" placeholder="请输入序列号" maxlength="23" class="el-input__inner">
+                </div>
+            </div>
+        </div>
+        <div class="el-form-item my-24px block is-required">
+            <div class="el-form-item__content">
+                <div class="form-input el-input el-input--suffix">
+                    <input type="password" autocomplete="on" placeholder="请输入密码" maxlength="30" class="el-input__inner">
+                    <span class="el-input__suffix">
+                            <span class="el-input__suffix-inner">
+                                <i class="iconfont mr-12px iconpwd-invisible"></i>
+                            </span>
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="el-form-item mb-32px block captcha is-required">
+            <div class="el-form-item__content">
+                <div class="form-input el-input el-input--suffix">
+                    <input type="text" autocomplete="on" name="captcha" maxlength="4" placeholder="请输入验证码" class="el-input__inner">
+                    <span class="el-input__suffix">
+                            <span class="el-input__suffix-inner">
+                                <img class="captcha-img" src="img/验证码.png" alt="captcha">
+                            </span>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <button type="button" class="el-button el-button--primary"><span> 确定 </span></button>
+    <div class="footer-links">
+        <span class="text-hr-orange cursor-pointer">忘记密码?</span>
+        <a href="https://www.huorong.cn/essmgr/essreg?status=hrstat&amp;src=28&amp;ver=essv2" target="_blank" class="text-hr-orange cursor-pointer float-right"> 新用户试用购买 </a>
+    </div>
+</div>
+
+</bodys>
+<body>
+<hr>
+<div class="foot">
+    <p>Copyright 2011-2024 北京火绒网络科技有限公司 ALL Rights Reserved  京ICP备16038014号  京公网安备11010502035539号</p>
+</div>
+</body>
+</html>

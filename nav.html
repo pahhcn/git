@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main-menu{
+            width: 80%;
+            height: 80px;
+            margin: auto;
+            background: gainsboro;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .menus{
+            width: 150px;
+            height: 80px;
+            background:gray;
+            line-height: 80px;
+            text-align: center;
+            z-index: 2;
+        }
+        .menus>a{
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .menu-son{
+            display: none;
+        }
+        .menu-son li{
+            list-style: none;
+            background: goldenrod;
+        }
+        .menu-son>a{
+            font-size: 17px;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .menus:hover .menu-son{
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="main-menu">
+    <div class="menus">
+        <a href="">首页</a>
+    </div>
+
+    <div class="menus">
+        <a href="">关于我们</a>
+        <div class="menu-son">
+            <a href=""><li>近年工作</li></a>
+            <a href=""><li>领导分工</li></a>
+            <a href=""><li>部门介绍</li></a>
+        </div>
+    </div>
+
+    <div class="menus">
+        <a href="">新闻中心</a>
+        <div class="menu-son">
+            <a href=""><li>热点关注</li></a>
+            <a href=""><li>团情快讯</li></a>
+            <a href=""><li>媒体聚焦</li></a>
+            <a href=""><li>团干动态</li></a>
+        </div>
+    </div>
+
+    <div class="menus">
+        <a href="">专题列表</a>
+        <div class="menu-son">
+            <a href=""><li>主题学习</li></a>
+            <a href=""><li>青年大学习</li></a>
+            <a href=""><li>乡村振兴</li></a>
+            <a href=""><li>成渝双城</li></a>
+            <a href=""><li>创业振新</li></a>
+            <a href=""><li>就业创业</li></a>
+        </div>
+    </div>
+
+    <div class="menus">
+        <a href="">资料中心</a>
+        <div class="menu-son">
+            <a href=""><li>文件资料</li></a>
+            <a href=""><li>公告信息</li></a>
+            <a href=""><li>信息简报</li></a>
+            <a href=""><li>团队课资料</li></a>
+            <a href=""><li>音视频下载</li></a>
+        </div>
+    </div>
+
+    <div class="menus">
+        <a href="">团青互动</a>
+        <div class="menu-son">
+            <a href=""><li>12355</li></a>
+            <a href=""><li>青年信箱</li></a>
+            <a href=""><li>青年家园</li></a>
+            <a href=""><li>联系我们</li></a>
+        </div>
+    </div>
+</div>
+<img src="image/微信图片_20200521091039.jpg" style="display: block;margin: 0 auto">
+</body>
+
+</html>
+

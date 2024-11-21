@@ -1,0 +1,557 @@
+var commonFun = function () {
+    var windowW = $(window).width();
+    var slidesPerView = 1200 > windowW ? 1 : 3;
+    this.bannerSwiperJson = {
+        autoplay: 3000,
+        initialSlide: 0,
+        nextButton: ".arrowBtnR",
+        prevButton: ".arrowBtnL",
+        loop: true
+    };
+    this.swiperJson = $.extend({}, this.bannerSwiperJson, {
+        slidesPerView: slidesPerView,
+        pagination: ".pagination",
+        paginationClickable: true
+    });
+    this.gotoTopType = false;
+    this.isVerticalScreen = true;
+    this.isIE = false
+};
+var intrBoxTimer = null;
+var cdn_url = 'https://cdn-www.huorong.cn';
+commonFun.prototype = {
+    init: function () {
+        // 加载公用头
+        // .loadHeader()
+        this.loadFooter().bundle().setNavActive().gotoTopToggle().verifyIE();
+        return this
+    }, bundle: function () {
+        var _this = this;
+        $(".businessDownload").hover(function () {
+            $(this).find("img")[0].src = (cdn_url + "/assets/v5/images/businessDownload-hover.svg");
+        }, function () {
+            $(this).find("img")[0].src = (cdn_url + "/assets/v5/images/businessDownload.svg");
+        });
+        $(".personDownload").hover(function () {
+            $(this).find("img")[0].src = (cdn_url + "/assets/v5/images/personDownload-hover.svg");
+        }, function () {
+            $(this).find("img")[0].src = (cdn_url + "/assets/v5/images/personDownload.svg");
+        });
+        $(".phone").hover(function () {
+            if ($(this).find("img") && $(this).find("img")[0]) {
+                $(this).find("img")[0].src = (cdn_url + "/assets/v5/images/phone-hover.svg");
+            }
+        }, function () {
+            if ($(this).find("img") && $(this).find("img")[0]) {
+                $(this).find("img")[0].src = (cdn_url + "/assets/v5/images/phone.svg");
+            }
+        });
+        $(".head").on("click", ".webNavBtn", function () {
+            var $this = $(this),
+                $webNav = $(".webNav");
+            isOpen = $this.hasClass("iconshoujiduanguanbianniu");
+            if (isOpen) {
+                $this.removeClass("iconshoujiduanguanbianniu").addClass("iconshoujicaidan");
+                $webNav.removeClass("active");
+            } else {
+                $this.addClass("iconshoujiduanguanbianniu").removeClass("iconshoujicaidan");
+                $webNav.addClass("active");
+            }
+
+        });
+        $(".webNav").click(function () {
+            $(".head .webNavBtn").click()
+        }).on('mouseover', '.adbotHRLi', function () {
+            var $adbotHR = $(this).find('>.adbotHR');
+
+            $adbotHR.prev().addClass('highColor');
+        }).on('mouseleave', '.adbotHRLi', function (e) {
+            $(this).find('.highColor').removeClass('highColor');
+        })
+        $(".nav li").hover(function () {
+            $(this).css("color", "#fa0");
+            $(this).find("div").css("backgroundPosition", -54)
+        }, function () {
+            $(this).css("color", "#282828");
+            $(this).find("div").css("backgroundPosition", 0)
+        });
+        $(".contantNumBox").on("click", ".gotoTop", function () {
+            $("body,html").animate({ scrollTop: 0 }, 500)
+        }).on("mouseover mouseout", ".gotoTop", function (e) {
+            var $gotoTopBox = $(".gotoTop");
+            $gotoTopBox.find(".gotoTopIcon").toggle().end().find(".gotoTopMsg").toggle()
+        }).on("mouseover mouseout", ".contantNum", function (e) {
+            var $num = $(".contantNum .num");
+            var isShow = $num.css("display");
+            var contantNumW = "none" == isShow ? "170px" : "50px";
+            $(".contantNum").find(".num").toggle().end().css("width", contantNumW)
+        });
+        $(".navDetail").on("click", "img", function (event, childSelector) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            $(event.currentTarget).addClass('zoom');
+            zoom($(this)[0], $(this).src, 0, 0, 0)
+        });
+        $(".cerPop").on("click", function () {
+            $(".shade").hide();
+            $(".cerPop").hide()
+        });
+        $(".footWechat").hover(function () {
+            $(this).find("img").css("display", "block")
+        }, function () {
+            $(this).find("img").css("display", "none")
+        });
+        $(".phone").hover(function () {
+            if ($(".gotoTop")[0].style.display === 'none') {
+                $(".phone").css("borderRadius", "0px 0px 6px 6px");
+            }
+        }, function () {
+            $(".phone").css("borderRadius", "0px");
+        });
+        // 视频播放
+        $(".hrVideo,.playerNew").on("click", ".playBtn", function (e) {
+            _this.stopPropagat(e);
+            var source = $(this).data("url") || "https://down5.huorong.cn/doc/hr50/hr50-read-in-three-minutes.mp4?v=2.4.0.1";
+            var sourceHtml = document.createElement("source");
+            sourceHtml.src = source;
+            var hasVideo = !!(document.createElement("video").canPlayType);
+            if (!!hasVideo) {
+                $(".hrVideo,.playerNew").find(".videoModal").find("#videoBox").attr("src", source).end().show();
+                if (_this.isVerticalScreen) {
+                    $(".videoModal .modal-container").css("width", "80%").css("height", "auto")
+                } else {
+                    $(".videoModal .modal-container").css("width", "auto").css("height", "80%")
+                }
+                $("#videoBox").get(0).play()
+            } else {
+                $(".incompatibleBox").find(".incompatible").attr("href", source).end().show()
+            }
+        }).on("click", ".videoModal,.videoModal .close", function () {
+            $(".hrVideo,.playerNew").find(".videoModal").hide().end().find(".videoBox").get(0).pause()
+        });
+        // 点击视频区域禁止冒泡触发videoModal click方法
+        $('.videoModal #videoBox').on('click', function (e) {
+            _this.stopPropagat(e);
+        })
+
+        $(".incompatibleBox").click(function () {
+            $(".incompatibleBox").hide()
+        }).on("click", ".incompatible", function (e) {
+            _this.stopPropagat(e)
+        });
+        $(document).on("click", ".dataUrl", function () {
+            var dataUrl = $(this).data("url");
+            window.open(dataUrl)
+        }).on("click", ".hrBtn", function (e) {
+            common.stopPropagat(e)
+        });
+        $(".likeWrapper").on("click", ".likeBox", function () {
+            $(this).find(".iconfont").addClass("active")
+        });
+        $(".reviewBody").on("click", ".likeNum", function () {
+            $(this).find(".iconfont").addClass("active")
+        });
+        // 证书放大
+        $('body').on('click', '.fotSmallImg', function () {
+            var index = $(this).index();
+            if (!$('.fot-all').find('img').eq(0).attr('src')) {
+                $('.fot-all').find('img').each(function () {
+                    $(this).attr('src', $(this).attr('data-src'))
+                });
+            }
+            $('.fot-all').show();
+            common.fotBigSwiper(index)
+        });
+        $('.fot-gray').click(function (e) {
+            $('.fot-all').hide()
+        });
+        $('.fot-big-box').click(function (e) {
+            var _con = $('.fot-big-btn');
+            if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+                $('.fot-all').hide()
+            }
+        });
+        (function () {
+            window.onload = function () {
+                document.addEventListener("gesturestart", function (e) {
+                    e.preventDefault()
+                });
+                document.addEventListener("dblclick", function (e) {
+                    e.preventDefault()
+                });
+                document.addEventListener("touchstart", function (event) {
+                    if (event.touches.length > 1) {
+                        event.preventDefault()
+                    }
+                });
+                var lastTouchEnd = 0;
+                document.addEventListener("touchend", function (event) {
+                    var now = (new Date()).getTime();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault()
+                    }
+                    lastTouchEnd = now
+                }, false)
+            }
+        })();
+        return this
+    }, verifyWindow: function () {
+        var $wind = $(window);
+        var windH = $wind.height();
+        var windW = $wind.width();
+        this.isVerticalScreen = (windH / windW * 100) >= 100 ? true : false;
+        return this
+    }, verifyIE: function () {
+        var DEFAULT_VERSION = 9;
+        var ua = navigator.userAgent.toLowerCase();
+        var isIE = ua.indexOf("msie") > -1;
+        var safariVersion;
+        if (isIE) {
+            safariVersion = ua.match(/msie ([\d.]+)/)[1]
+        }
+        if (safariVersion <= DEFAULT_VERSION) {
+            this.isIE = true;
+            $(document).find(".swiperCss,.swiperJs").remove();
+            console.log("系统检测到您正在使用ie8以下内核的浏览器，不能实现完美体验，请更换或升级浏览器访问！")
+        }
+        return this
+    }, setNavActive: function () {
+
+        var a = window.location.pathname;
+        a = a.substr(a.indexOf("/") + 1);
+        if (a.indexOf("/") != -1) {
+            a = a.substr(0, a.indexOf("/"))
+        }
+        if (a.indexOf(".") != -1) {
+            a = a.substr(0, a.indexOf("."))
+        }
+        a = a || "index";
+        $(".hdnavHome").parent().removeClass("active");
+        $("." + a).addClass("active")
+
+
+        return this
+    }, setEllipsis: function (rows, dom) {
+        if ("-webkit-line-clamp" in document.documentElement.style) {
+        } else {
+            var domBox = dom || document;
+            var $ellipsisArr = $(domBox).find(".ellipsis");
+            console.log($ellipsisArr.length);
+            $.each($ellipsisArr, function () {
+                var $_this = $(this);
+                var lineH = parseInt($_this.css("line-height"));
+                var boxH = $_this.height();
+                var maxH = lineH * rows;
+                console.log(maxH);
+                if (maxH < boxH) {
+                    $_this.addClass("ellipsis_over");
+                    $_this.css("height", maxH)
+                } else {
+                    $_this.removeClass("ellipsis_over")
+                }
+            })
+        }
+        return this
+    }, stopPropagat: function (e) {
+        if (e && e.stopPropagation) {
+            e.stopPropagation()
+        } else {
+            window.event.cancelBubble = true
+        }
+    }, gotoTopToggle: function () {
+        if ($(document).scrollTop()) {
+            $(".gotoTop").show()
+        } else {
+            $(".gotoTop").hide()
+        }
+        return this
+    }, gotoTop: function () {
+        var _this = this;
+        $(window).on("scroll", function () {
+            _this.gotoTopToggle()
+        });
+        return this
+    }, videoBoxScrollToggle: function (id, timer, overCb, outCb) {
+        $(id).mouseover(function () {
+            timer.stopAutoplay()
+            overCb && overCb();
+        }).mouseout(function () {
+            timer.startAutoplay()
+            outCb && outCb()
+        });
+
+        return this
+    }, setIntroduceAnime: function (obj, len, start, interval) {
+        var _scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        var screenHeight = $(window).height();
+        var docHeight = screenHeight + _scrollTop;
+        for (var i = 0; i < len; i++) {
+            if (docHeight >= (start + (i * interval))) {
+                $(obj).eq(i).addClass("active")
+            }
+        }
+        return this
+    }, swiperBtn: function (obj, timer) {
+        var prev = prev || ".arrowBtnL";
+        var next = next || ".arrowBtnR";
+        $(obj).on("click", prev, function (e) {
+            e.preventDefault();
+            if (timer.slidePrev) {
+                timer.slidePrev()
+            } else {
+                timer.swipePrev()
+            }
+        }).on("click", next, function (e) {
+            e.preventDefault();
+            if (timer.slideNext) {
+                timer.slideNext()
+            } else {
+                timer.swipeNext()
+            }
+        });
+        return this
+    }, setVideoShow: function () {
+        var _this = this;
+        $(window).on("resize", function () {
+            var windowW = $(window).width();
+            if (768 > windowW) {
+                _this.videoView = 1
+            }
+
+        });
+        return this
+    }, getUserAgent: function () {
+        var reg = "/phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/";
+        var ua = navigator.userAgent;
+        var isSafari = ua.indexOf("Safari") != -1 && ua.indexOf("Version") != -1;
+        var isIphone = ua.indexOf("iPhone") != -1 && ua.indexOf("Version") != -1
+        var isIPad = isSafari && !isIphone && 'ontouchend' in document;
+        if (navigator.userAgent.match(reg) || (isSafari && isIphone) || (isSafari && isIPad)) {
+            //首页 个人版6.0公测
+            $(".personal6Banner .downLoadBtn,.personal6Banner .linkBtn,.personPlainDownLoad").hide();
+            $(".personal6Banner .container .detailBtn").show();
+            //首页 企业版 2.0
+            $("#banner_index .essV2Banner .container .btnBox").addClass('btnBox-m').show();
+            //个人版
+            $(".personBanner .container .btnBox, .hrVideo .btnBox").addClass('btnBox-m').show();
+            $(".personBanner .container .downLoadBtn, .hrVideo .btnBox .downLoadBtn").hide();
+            $(".personBanner .container .detailBtn").css({
+                "margin": "0 auto"
+            });
+            // 移动端 个人版 下载按钮 改为右下角
+            $(".personBanner .container .downloadInPc,.personal6Banner .downloadInPc").css("display", "inline-block");
+
+            // 个人版 下载按钮
+            $(".personBanner .container .downLoadDoc").css("display", "none");
+
+            //企业版
+            $(".essBanner .btnBox .btn.userLogin").css("display", "none");
+
+            // 首页 应用商店
+            $(".storeBanner .container .downloadTip").show();
+            $(".storeBanner .container .bannerBtnDownload").hide();
+            $(".storeWrap .downloadTip").show();
+            $(".storeWrap .btnDownload .download").css("display", "none");
+            $(".storeWrap #intrBoxWrapper .msgBox").addClass('msgBox-m')
+            $(".storeWrap").addClass('storeWrap-m')
+
+            //试用登录下载按钮
+            $('.downLoadBox').addClass('hide');
+            // 企业版 2.0 公测版页面  用户登录按钮
+            $('#fullBanner .userLogin').hide();
+
+            // 首页 了解我们 hover样式(pad和手机端不执行hover)
+            $('.leftFeatures .learnUsList').removeClass('isPc');
+
+            // ----------  公测版首页 ----------
+            $(".pubBanner").addClass('is_m');
+            $(".banner_btns").addClass('is_m');
+            $(".bottom_btns").addClass('is_m');
+            $(".banner").addClass('is_m');
+            $(".pub_body").addClass('is_swiper_m');
+            $(".mac_banner_name").addClass('is_m');
+            $(".adapt_ul_first").addClass('is_m');
+
+            // ----------  公测版首页 end----------
+
+            $('.nav_login').addClass('nav_login_m')
+            // 代理商登录
+            $('.agentLogin').hide()
+
+        } else {
+            //首页 个人版6.0公测
+            $(".personal6Banner .downLoadBtn,.personal6Banner .linkBtn,.personPlainDownLoad").show();
+            $(".personal6Banner .container .detailBtn").hide();
+            //首页 企业版2.0
+            $("#banner_index .essV2Banner .container .btnBox").removeClass('btnBox-m').show();
+            //个人版
+            $(".personBanner .container .btnBox, .hrVideo .btnBox").removeClass('btnBox-m');
+            $(".personBanner .container .downLoadBtn, .hrVideo .btnBox .downLoadBtn").html("个人免费下载");
+            $(".personBanner .container .downLoadBtn, .hrVideo .btnBox .downLoadBtn").attr("href", function () {
+                return !!$(this).attr("data-href") ? $(this).attr("data-href") : "/downloadfullv5.html";
+            });
+            $(".personBanner .container .bannerMsg").css("display", "block");
+            // 移动端 个人版 下载按钮 改为右下角 // 6.0 公测
+            $(".personBanner .container .downloadInPc,.personal6Banner .downloadInPc").css("display", "none");
+            //企业版
+            $(".essBanner .btnBox .btn.userLogin").css("display", "inline-block");
+            //试用登录下载按钮
+            $('.downLoadBox').removeClass('hide');
+            // 企业版 2.0 公测版页面 用户登录按钮
+            $('#fullBanner .userLogin').show();
+
+            // 应用商店
+            // $(".storeBanner .container .bannerBtnDownload").css("display", "inline-block");
+            // 首页 应用商店
+            $(".storeBanner .container .downloadTip").hide();
+            $(".storeBanner .container .bannerBtnDownload").show();
+            $(".storeWrap .btnDownload .download").css("display", "inline-block");
+            $(".storeWrap #intrBoxWrapper .msgBox").addClass('msgBox-p')
+            $(".storeWrap .downloadTip").hide()
+            if ($(".storeWrap").hasClass('storeWrap-m')) {
+                $(".storeWrap").removeClass('storeWrap-m')
+            }
+
+            // 首页 了解我们 hover样式
+            $('.leftFeatures .learnUsList').addClass('isPc');
+
+            // ----------  公测版首页 ----------
+            $(".pubBanner").removeClass('is_m');
+            $(".banner_btns").removeClass('is_m');
+            $(".bottom_btns").removeClass('is_m');
+            $(".banner").removeClass('is_m');
+            $(".pub_body").removeClass('is_swiper_m');
+            $(".mac_banner_name").removeClass('is_m');
+            $(".adapt_ul_first").removeClass('is_m');
+            // ----------  公测版首页 end----------
+
+            $('.nav_login').removeClass('nav_login_m');
+            // 代理商登录
+            $('.agentLogin').show()
+
+            // 个人版 下载按钮
+            $(".personBanner .container .downLoadDoc").css("display", "inline-block");
+
+            // 加入我们
+            $(".jobBox .bossText div").css("color", "#626262");
+        }
+        return this
+    },
+    loadHeader: function () {
+        var that = this;
+        this.loadHtml('/template/header', function (obj) {
+            $('.head').html(obj.html)
+            that.setNavActive()
+        });
+        return this;
+    },
+    loadFooter: function () {
+        // footer 为html页面底部公用模块class，php模板页面不需要改class
+        var that = this,
+            $foot = $('.foot');
+        if ($foot.hasClass('footer')) {
+            this.loadHtml('/template/footer', function (obj) {
+                $('.footer').html(obj.html)
+            });
+        }
+
+        return this;
+    },
+    // 证书轮播图
+    fotSmallSwiper: function () {
+        new Swiper(".fot-small-swiper", {
+            pagination: '.swiper-pagination',
+            slidesPerView: 'auto',
+            slidesPerView: 5,
+            paginationClickable: true,
+            autoplay: 2500
+        });
+        return this;
+    },
+    fotBigSwiper: function (showNum) {
+        $('.arrowBtnL').show()
+        if (intrBoxTimer) {
+            intrBoxTimer.destroy(true, true);
+        }
+        intrBoxTimer = new Swiper(".fot-big-swiper", {
+            initialSlide: showNum,
+            nextButton: '.fotBigR',
+            prevButton: '.fotBigL',
+        });
+        return this;
+    },
+    loadHtml: function (url, callback) {
+        url = url || ''
+        var engine = '.html?v=' + (new Date()).valueOf(),
+            queryIndex = url.indexOf('?')
+        if (queryIndex !== -1) url = url.slice(0, queryIndex)
+        $.ajax({
+            url: url + engine,
+            type: 'get',
+            dataType: 'html',
+            success: function (html) {
+                callback({ html: html, url: url });
+            },
+            error: function (res) {
+                console.log(
+                    '请求视图文件异常\n文件路径：' + url + '\n状态：' + res.status
+                )
+            }
+        })
+    },
+    lazyLoadImg: function () {
+        var screenWidth = window.innerWidth;
+        var verDom = screenWidth >= 1100 ? '.verImg' : (screenWidth >= 768 && screenWidth <= 1100 ? '.verImg_p' : '.verImg_m');
+        $('.verImgBox ' + verDom).attr('src', $('.verImgBox ' + verDom).attr('data-src'));
+    }
+};
+var scrollLogo = function () {
+    this.logoNum = 10
+};
+scrollLogo.prototype = {
+    setScroll: function (id, timer, speed, direction) {
+        var speed = speed || 50;
+        var direction = direction || -1;
+        var oDiv = document.getElementById(id);
+        var oUl = oDiv.getElementsByTagName("ul")[0];
+        var oLi = oUl.getElementsByTagName("li");
+        for (var i = 0; i < 3; i++) {
+            oUl.innerHTML += oUl.innerHTML;
+        }
+        oUl.style.width = 123 * 2 * oLi.length + "px";
+        clearInterval(timer);
+        function starMove() {
+            timer = setInterval(function () {
+                oUl.style.left = oUl.offsetLeft + direction + "px";
+                if (-oUl.offsetLeft >= oUl.offsetWidth / 2) {
+                    oUl.style.left = "0px"
+                } else {
+                    if (oUl.offsetLeft > 0) {
+                        oUl.style.left = -oUl.offsetWidth / 2 + "px"
+                    }
+                }
+            }, speed)
+        }
+
+        starMove();
+        // oDiv.onmouseover = function () {
+        //     clearInterval(timer)
+        // };
+        // oDiv.onmouseout = function () {
+        //     starMove()
+        // }
+    }, setPartnerScroll: function () {
+        // this.setScroll("partnerUlBox1", partnerUlBox1, 30);
+        // this.setScroll("partnerUlBox2", partnerUlBox2, 50);
+        // this.setScroll("partnerUlBox3", partnerUlBox3, 30);
+        // this.setScroll("partnerUlBox4", partnerUlBox4, 50);
+        // this.setScroll("partnerUlBox5", partnerUlBox5, 30);
+        return this
+    },
+};
+var common = new commonFun();
+common.init().gotoTop().getUserAgent().fotSmallSwiper().lazyLoadImg();
+$(window).resize(function () {
+    common.lazyLoadImg()
+});

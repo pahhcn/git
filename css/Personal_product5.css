@@ -1,0 +1,262 @@
+.Personal_product5_main1{
+    margin-top: -500px;
+    margin-left: 250px;
+    font-size: 28px;
+    color: #f2a034;
+
+}
+.head1{
+    padding-top: 5px;
+    font-size: 14px;
+    color:honeydew;
+}
+.head11 {
+    margin-top: 70px;
+}
+.head11 a{
+    padding: 4px;
+    color:black;
+    background: #f2a034;
+    text-decoration: none;
+    border-radius: 8px;}
+
+.head12{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.head12 a{
+    color: white;
+
+}
+.head13{
+    margin-bottom: 100px;
+}
+
+.head21 img{
+    padding:100px 0 0 350px
+}
+.head21 p{
+    float: right;
+}
+
+.p1{
+    font-size: 30px;
+    margin-right: 640px;
+    margin-top: 100px;
+
+}
+.p2{
+    font-size: 25px;
+    margin-right:80px;
+    margin-top: -250px;
+
+}
+.p21{
+    font-size: 25px;
+    margin-right:680px;
+    margin-top: -210px;
+}
+.p3{
+    font-size: 18px;
+    margin-right:550px;
+    margin-top: -100px;
+}
+.personal{
+
+    display: flex;
+    justify-items: center;
+    justify-self: center;
+    margin: 0 400px 0 400px;
+
+
+}
+
+/*轮播图*/
+.head-slideshow_personal{
+    width:373px;
+    height:244px;
+    /* 轮播图居中 */
+    margin:  20px 10px 0 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px 0;
+
+    /* 隐藏超出展示容器的内容 */
+    overflow: hidden;
+    position: relative;
+}
+
+.head-slideshow_personal .head-slideshow-img_personal {
+    width:2264px;
+    height:370px;
+    overflow: hidden;
+    position: absolute;
+    /* 开启弹性盒，让图片横向排列 */
+    display: flex;
+    animation: run_personal 20s ease infinite;
+}
+
+.head-slideshow_personal .head-slideshow-img_personal img{
+    width:566px;
+    height:370px;
+}
+
+/* 动画关键帧 */
+@keyframes run_personal {
+    0%,20%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+    20%,30%{
+        /* margin-left: -1200px;; */
+        transform: translateX(-566px);
+    }
+    40%,50%{
+        /* margin-left: -2400px; */
+        transform: translateX(-1132px);
+    }
+    60%,70%{
+        /* margin-left: -3600px; */
+        transform: translateX(-1698px);
+    }
+    80%,90%{
+        /* margin-left: -4800px; */
+        transform: translateX(-2264px);
+    }
+    100%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 200px 60px 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.certificates{
+    display: flex;
+}
+.certificates p{
+    margin-right: 10px;
+
+}
+
+
+
+.footer-copyright {
+    color: red;
+    margin-top: -7px;
+    background-color: #333;
+    font-size: 14px;
+    height: 60px;
+}
+.footer-copyright p {
+    color: #ffffff;
+
+}
+
+
+/*轮播图*/
+.head-slideshow1{
+    width:74px;
+    height:100px;
+    /* 轮播图居中 */
+    margin:1rem auto;
+    /* 隐藏超出展示容器的内容 */
+    overflow: hidden;
+    position: relative;
+
+}
+
+.head-slideshow1 .head-slideshow-img1 {
+    width:296px;
+    height:400px;
+    overflow: hidden;
+    position: absolute;
+    /* 开启弹性盒，让图片横向排列 */
+    display: flex;
+    animation: run3 10s ease infinite;
+}
+
+.head-slideshow1 .head-slideshow-img1 img{
+    width:74px;
+    height:100px;
+}
+
+/* 动画关键帧 */
+@keyframes run3 {
+    0%,10%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+    20%,30%{
+        /* margin-left: -1200px;; */
+        transform: translateX(-74px);
+    }
+    40%,50%{
+        /* margin-left: -2400px; */
+        transform: translateX(-148px);
+    }
+    60%,70%{
+        /* margin-left: -3600px; */
+        transform: translateX(-222px);
+    }
+    80%,90%{
+        /* margin-left: -4800px; */
+        transform: translateX(-296px);
+    }
+    100%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+}
+
+.last{
+    background: black;
+    color:white ;
+    height: 300px;
+    margin-bottom: -20px;
+}
+
+.pl1{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+.pl2{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.pl3{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 25px;
+
+}
+.pl3 a{
+    color:black ;
+    background: #f2a034;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+}

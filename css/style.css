@@ -1,0 +1,372 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*导航栏css*/
+.main-menu{
+    width: 71%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.menus{
+    width: 150px;
+    height: 40px;
+    background:white;
+    line-height: 40px;
+    text-align: center;
+    z-index: 100;
+}
+.menus>a{
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    background: white;
+}
+.menu-son{
+    display: none;
+}
+.menu-son li{
+    list-style: none;
+    background: white;
+}
+.menu-son>a{
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+.menus:hover .menu-son {
+    display: block;
+
+}
+.logo img {
+    height: 35px;
+}
+
+/*轮播图*/
+.head-slideshow{
+    width:1673px;
+    height:600px;
+    /* 轮播图居中 */
+    margin:1rem auto;
+    /* 隐藏超出展示容器的内容 */
+    overflow: hidden;
+    position: relative;
+
+}
+
+.head-slideshow .head-slideshow-img {
+    width:12675px;
+    height:600px;
+    overflow: hidden;
+    position: absolute;
+    /* 开启弹性盒，让图片横向排列 */
+    display: flex;
+    animation: run 20s ease infinite;
+}
+
+.head-slideshow .head-slideshow-img img{
+    width:1673px;
+    height:600px;
+}
+
+/* 动画关键帧 */
+@keyframes run {
+    0%,10%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+    20%,30%{
+        /* margin-left: -1200px;; */
+        transform: translateX(-1673px);
+    }
+    40%,50%{
+        /* margin-left: -2400px; */
+        transform: translateX(-3346px);
+    }
+    60%,70%{
+        /* margin-left: -3600px; */
+        transform: translateX(-5019px);
+    }
+    80%,90%{
+        /* margin-left: -4800px; */
+        transform: translateX(-6693px);
+    }
+    100%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+.container {
+    width: 63%;
+    margin: 0 auto;
+}
+
+/*<!--以xia为主要内容-->*/
+
+
+
+.downLoadBox{
+
+   display: flex;
+    justify-content: space-around; /* 分散排列子项，增加间距 */
+    width: 1200px;
+    height: 90px;
+}
+.downLoadBox .enterprise,
+.downLoadBox .personal {
+    display: flex;
+    padding-top: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    justify-content: space-around;
+    width:600px ;
+
+}
+
+.downLoadBox h3 {
+    font-size: 20px;
+}
+
+.downLoadBox p {
+    font-size: 15px;
+    color: #f2a034;
+    padding: 10px;
+}
+
+
+.container{
+    width: 63%;
+    text-align: left;
+}
+
+
+
+.learn-us {
+    overflow: hidden;
+    display: block;
+    padding: 60px 0 60px 0;
+}
+
+.learn-us h2 {
+    font-size: 20px;
+}
+
+.learn-us h3 {
+    font-size: 14px;
+}
+
+.learn-us img {
+    border: none;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add some margin between items */
+}
+
+.feature-content {
+    margin-left: 10px; /* Add some space between the image and the content */
+}
+
+
+
+/*建议部分*/
+
+.advisory{
+    width: 100%;
+    padding-top: 10px;
+   background-color: #ffffff;
+}
+
+.advisoryHead{
+    height: 50px;
+}
+.advisoryHead p{
+    float: left;
+    height: 50px;
+    margin-top:15px ;
+    font-size: 24px;
+    line-height: 50px;
+    list-style: none;
+}
+.advisoryHead ul li{
+    float: right;
+    height: 50px;
+    margin-top:15px ;
+    margin-right: 20px;
+    line-height: 50px;
+    list-style: none;
+    font-size: 20px;
+}
+.advisory-main{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.advisory1 p{
+    height: 104px;
+}
+.advisory2{
+    padding-left: 20px;
+}
+.advisory3{
+    padding-right: 70px;
+}
+
+.a1{
+    color: #f2a034;
+    text-decoration: none;
+}
+
+/*    */
+/*    */
+/*<!--以上为主要内容-->*/
+
+
+
+
+
+
+/*页脚部分*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 200px 60px 200px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.certificates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.certificates p{
+    margin-right: 10px;
+}
+
+
+
+.certifications img {
+    margin: 0 10px;
+    height: 100px;
+}
+
+.footer-copyright {
+    color: white;
+    margin-top: -7px;
+    background-color: #333;
+    font-size: 14px;
+    height: 60px;
+}
+.footer-copyright p{
+    margin-left: 200px;
+}
+
+/*轮播图*/
+.head-slideshow1{
+    width:74px;
+    height:100px;
+    /* 轮播图居中 */
+    margin:1rem auto;
+    /* 隐藏超出展示容器的内容 */
+    overflow: hidden;
+    position: relative;
+
+}
+
+.head-slideshow1 .head-slideshow-img1 {
+    width:296px;
+    height:400px;
+    overflow: hidden;
+    position: absolute;
+    /* 开启弹性盒，让图片横向排列 */
+    display: flex;
+    animation: run-footer 10s ease infinite;
+}
+
+.head-slideshow1 .head-slideshow-img1 img{
+    width:74px;
+    height:100px;
+}
+
+/* 动画关键帧 */
+@keyframes run-footer {
+    0%,10%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+    20%,30%{
+        /* margin-left: -1200px;; */
+        transform: translateX(-74px);
+    }
+    40%,50%{
+        /* margin-left: -2400px; */
+        transform: translateX(-148px);
+    }
+    60%,70%{
+        /* margin-left: -3600px; */
+        transform: translateX(-222px);
+    }
+    80%,90%{
+        /* margin-left: -4800px; */
+        transform: translateX(-296px);
+    }
+    100%{
+        /* margin-left: 0; */
+        transform: translateX(0);
+    }
+}
+
+/*悬浮按钮css*/
+.floating-buttons {
+    position: fixed;
+    top: 60%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #dedede;
+}
+.floating-buttons .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    width: 40px;  /* 设定按钮宽度 */
+}
+.floating-buttons .button img {
+    display: block;
+    margin-bottom: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.floating-buttons .button:hover,
+.floating-buttons .button.active {
+    background-color: #f2a034;
+    color: white;
+}
+
+.floating-buttons .button:hover img,
+.floating-buttons .button.active img {
+    filter: brightness(0) invert(1);
+}

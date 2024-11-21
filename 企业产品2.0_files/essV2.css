@@ -1,0 +1,1574 @@
+.navBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f9f9f9;
+  width: 100%;
+  color: #adadad;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eeefee;
+  font-size: 0;
+  z-index: 2;
+}
+.navBox .iconfont {
+  margin-right: 20px;
+  font-size: 28px;
+}
+.navBox .container {
+  text-align: center;
+}
+.navBox .liBtn {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 20px 0;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  border-left: 2px solid #eee;
+  cursor: pointer;
+}
+.navBox .liBtn:first-child {
+  border: 0;
+}
+.navBox .liBtn .iconfont {
+  vertical-align: middle;
+}
+.navBox .liBtn a {
+  color: #adadad;
+}
+.navBox .liBtn:hover a {
+  color: #f9a732;
+}
+.navBox .liBtn.third {
+  margin-left: 260px;
+}
+.navBox .container {
+  position: relative;
+}
+.navBox .pullDown {
+  position: absolute;
+  top: 70px;
+  left: 520px;
+  width: 148px;
+  height: 38px;
+  background: url('https://cdn-www.huorong.cn/assets/v5/images/pulldown.png') -226px -70px no-repeat;
+  color: #606060;
+  font-size: 16px;
+  cursor: pointer;
+}
+.navBox .pullDown .pullDownIcon {
+  position: absolute;
+  bottom: 14px;
+  left: 68px;
+  display: block;
+  margin: 0;
+  font-size: 14px;
+}
+.navBox .pullDown:hover {
+  color: #f9a732;
+}
+.introduce .introduceTitBox {
+  height: 128px;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  background: url('https://cdn-www.huorong.cn/assets/v5/images/introducebg.png') center 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.introduce .introduceTitBox .introduceTit {
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: #333;
+}
+.introduce .introduceTitBox .introduceSubtitle {
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0px;
+  color: #626262;
+}
+.introduce .intrBox {
+  width: 100%;
+  height: 600px;
+  background-color: #f9f9f9;
+}
+.introduce .intrBox .container {
+  height: 600px;
+  box-sizing: border-box;
+}
+.introduce .intrImgBox {
+  float: right;
+  width: 600px;
+  height: 600px;
+  display: table;
+  line-height: 600px;
+  vertical-align: middle;
+  text-align: center;
+}
+.introduce .intrImgBox .introduceImg {
+  vertical-align: middle;
+}
+.introduce .intrImgBox .accessControl {
+  margin-left: -55px;
+}
+.introduce .intrImgBox .versionScan {
+  margin-left: -70px;
+}
+.introduce .msgWrapper {
+  visibility: hidden;
+  display: table-cell;
+  height: 600px;
+  vertical-align: middle;
+}
+.introduce .leftImg .intrImgBox {
+  float: left;
+}
+.introduce .leftImg .msgWrapper {
+  padding-left: 54px;
+}
+.introduce .leftImg .msgBox {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0;
+}
+.introduce .leftImg .msgBox .intrMsg {
+  width: 540px;
+}
+.introduce .msgBox {
+  display: none;
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+}
+.introduce .msgBox .intrHead {
+  font-size: 32px;
+  line-height: 50px;
+}
+.introduce .msgBox .intrHead .introNum {
+  margin-right: 20px;
+  color: #60cd9e;
+  font-size: 50px;
+}
+.introduce .msgBox .intrMsg {
+  margin-top: 60px;
+  width: 600px;
+  line-height: 30px;
+  font-size: 20px;
+  color: #333;
+}
+.introduce .msgBox .more {
+  margin-top: 40px;
+  font-size: 16px;
+}
+.introduce .msgBox .more .iconfont {
+  margin-left: 20px;
+}
+.introduce .intrTrait {
+  margin-top: 42px;
+  font-size: 16px;
+  line-height: 2;
+  color: #626262;
+}
+.featureMsg.active .featureBox {
+  display: block;
+  -webkit-animation: slideUp 1s ease-in-out both;
+  animation: slideUp 1s ease-in-out both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.intrBox.active .msgWrapper {
+  visibility: visible;
+  -webkit-animation: slideUp 1s ease-in-out both;
+  animation: slideUp 1s ease-in-out both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+@media screen and (min-width: 310px) and (max-width: 1200px) {
+  .navBox .liBtn {
+    margin: 10px 0;
+    width: 50%;
+  }
+  .navBox .liBtn .iconfont {
+    font-size: 20px;
+  }
+  .introduce .introduceTitBox {
+    padding: 0;
+    height: 59px;
+  }
+  .introduce .introduceTitBox .introduceSubtitle {
+    background-color: #f9f9f9;
+  }
+  .introduce .introduceTitBox .introduceTit {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 35px;
+  }
+  .introduce .introduceTitBox .introduceSubtitle {
+    font-size: 13px;
+    line-height: 25px;
+  }
+}
+html {
+  font-size: 12px;
+}
+html,
+body {
+  overflow: visible;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+@media screen and (min-width: 340px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 420px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 568px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 22px;
+  }
+}
+.essV2Body {
+  background-color: #fafafa;
+}
+.essV2Center {
+  text-align: center;
+}
+.essV2Title {
+  font-size: 30px;
+  line-height: 60px;
+  color: #333333;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.essV2Title.dack {
+  color: #ffeccf;
+}
+ul.essLogoBox {
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 452px;
+  overflow: hidden;
+  font-size: 0;
+}
+ul.essLogoBox:after {
+  content: '';
+  width: 160px;
+}
+ul.essLogoBox li.temp {
+  height: 0 !important;
+  margin: 0 !important;
+}
+.loadMore {
+  display: none;
+}
+.heightAuto {
+  height: auto !important;
+}
+.fullBanner {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+  background-color: #333;
+}
+.fullBanner .box {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.fullBanner .box .mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0;
+}
+.fullBanner .box .videoBg {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.fullBanner .box .videoBg .video-bg {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.fullBanner .box .loginBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.fullBanner .box .login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  margin: 0px;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  color: #ffeccf;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.fullBanner .box .login .loginTitle {
+  line-height: 3rem;
+  font-size: 2rem;
+}
+.fullBanner .box .login .loginTitle .tip{
+  font-size: 1.33rem;
+}
+.fullBanner .box .login .loginSubTitle {
+  line-height: 5rem;
+  font-size: 3rem;
+}
+.fullBanner .box .login .loginBtnBox {
+  font-size: 0;
+  margin-top: 4.2rem;
+  margin-bottom: 2rem;
+}
+.fullBanner .box .login .loginBtnBox .btn {
+  display: inline-block;
+}
+.fullBanner .box .login .loginBtnBox .btn:first-child {
+  margin-right: 1rem;
+}
+.fullBanner .box .login .loginBtnBox .lineBtn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 8rem;
+  height: 2.2rem;
+  padding: 0;
+  border-radius: 4px;
+  border: solid 1px #ffeccf;
+  line-height: 2.1rem;
+  background: none;
+  font-size: 0.9rem;
+  color: #ffeccf;
+  cursor: pointer;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+.fullBanner .box .login .loginBtnBox .lineBtn:first-child {
+  margin: 0;
+}
+.fullBanner .box .login .loginBtnBox .lineBtn:hover {
+  color: #222;
+  border: none;
+  background-color: #ffeccf;
+}
+.fullBanner .box .login .loginBtnBox .lineBtn:active {
+  color: #222;
+  border: none;
+  background-color: #d8b07b;
+}
+.fullBanner .box .login .gotoV1 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.fullBanner .box .login .gotoV1:hover {
+  color: #dec091;
+}
+.fullBanner .box .login .essV2MsgTitle {
+  margin-top: 3.5rem;
+  width: 100%;
+  line-height: 1.8rem;
+}
+.fullBanner .box .essV2Msg {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #333333, rgba(51, 51, 51, 0));
+}
+.fullBanner .box .essV2Msg .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fullBanner .box .essV2Msg .bannerImg {
+  margin: 0 auto;
+  display: block;
+  width: 37rem;
+  height: auto;
+}
+.fullBanner .box .essV2Msg .downloadFile {
+  opacity: 0;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.fullBanner .box .essV2Msg .downloadFile li {
+  flex-basis: 16.666%;
+  max-width: 16.666%;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+}
+.fullBanner .box .essV2Msg .downloadFile li a {
+  color: #ffeccf;
+}
+.fullBanner .box .essV2Msg .downloadFile li a:hover {
+  color: #dec091;
+}
+.fullBanner .box .essV2Msg .downloadFile li a:active {
+  color: #cba168;
+}
+.fullBanner .box .essV2Msg .downloadFile li .iconfont {
+  font-size: 36px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.fullBanner .box .essV2Msg .downloadFile li span {
+  font-size: 18px;
+  line-height: 36px;
+}
+.fullBanner .box .essV2Msg .supportedSystem {
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffeccf;
+  line-height: 1.75rem;
+}
+.blackBg {
+  position: absolute;
+  bottom: -100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://cdn-www.huorong.cn/assets/v5/images/ess20/mask.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.introduceBox {
+  position: relative;
+  height: 300vh;
+  width: 100%;
+}
+.introduceBox .introduce {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.introduceBox .introduce .container {
+  border: 0;
+}
+.introduceBox .introduce .intrBox {
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.introduceBox .introduce .intrBox .container {
+  position: relative;
+  height: 100vh;
+  border: none;
+}
+.introduceBox .introduce .intrBox .container .intrImgBox {
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  width: 66%;
+  line-height: inherit;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.introduceBox .introduce .intrBox .container .intrImgBox .intrImg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.introduceBox .introduce .intrBox .container .msgWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 100vh;
+  z-index: 999;
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .msgBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  width: 600px;
+  transform: translate(-50%, -50%);
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .intrHead {
+  line-height: 3rem;
+  font-size: 1.5rem;
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .intrSubHead {
+  line-height: 2rem;
+  font-size: 1rem;
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .intrMsg {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .intrBtn {
+  margin-top: 2rem;
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .intrBtn .wireBtn {
+  color: #ecb051;
+  border: 1px solid #ecb051;
+  background: none;
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .intrBtn .wireBtn:hover {
+  background-color: #ecb051;
+  color: #fefefe;
+}
+.introduceBox .introduce .intrBox .container .msgWrapper .intrBtn .wireBtn:active {
+  background-color: #daa34b;
+  color: #fefefe;
+}
+.introduceBox .introduce .intrBox.leftImg .intrImgBox {
+  right: auto;
+  left: 0;
+}
+.introduceBox .introduce .intrBox.leftImg .msgWrapper {
+  position: absolute;
+  left: auto;
+  right: 0;
+  width: 47%;
+  padding: 0;
+  text-align: right;
+}
+.introduceBox .introduce .intrBox.leftImg .msgWrapper .intrMsg {
+  width: 100%;
+}
+.introduceBox .introduce .intrBox.leftImg .msgWrapper .msgBox {
+  width: 100%;
+}
+.introduceBox .introduce .swiper-container .arrowBtn,
+.introduceBox .introduce .pagination {
+  display: none;
+}
+.coreFunctions {
+  background-color: #333;
+  height: 936px;
+  box-sizing: border-box;
+  margin-top: 200vh;
+  position: relative;
+}
+.coreFunctions .coreFunWrapper {
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: -1.25rem;
+  padding-bottom: 2rem;
+}
+.coreFunctions .coreFunWrapper .coreFunbox {
+  position: relative;
+  margin-top: 2rem;
+  height: 17.5rem;
+  flex-basis: 25%;
+  max-width: 25%;
+  font-size: 0;
+  line-height: 1.4rem;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFunImg {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  display: inline-block;
+  font-size: 0;
+  margin-bottom: 0.75rem;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFunImg i.iconfont {
+  font-size: 3rem;
+  color: #ffeccf;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFunTitle {
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  margin-bottom: 1rem;
+  color: #ffeccf;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFunTitle:after {
+  content: '';
+  position: absolute;
+  top: 2.6rem;
+  left: 50%;
+  margin-left: -0.75rem;
+  width: 1.5rem;
+  border-top: 1px solid #FFECCF;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFundetail {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #ffeccf;
+  padding: 0 10px;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFunBtn {
+  font-size: 0.9rem;
+  color: #efce93;
+  position: absolute;
+  top: 13rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFunBtn:hover {
+  color: #cba168;
+}
+.coreFunctions .coreFunWrapper .coreFunbox .coreFunBtn:active {
+  color: #b7893f;
+}
+.serviceCompanyBox {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+}
+.serviceCompany {
+  position: sticky;
+  top: 0;
+  /* height: 100vh; */
+  height: auto;
+  min-height: 100vh;
+}
+.serviceCompany .essV2Title {
+  margin-top: 150px;
+}
+.serviceCompany .serviceCompanyTab {
+  margin: 60px 100px 72px 100px;
+  height: 50px;
+  line-height: 48px;
+  font-size: 0;
+}
+.serviceCompany .serviceCompanyTab li {
+  width: 50%;
+  font-size: 24px;
+  display: inline-block;
+  color: #666666;
+  box-sizing: border-box;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+}
+.serviceCompany .serviceCompanyTab li.active {
+  color: #bd935a;
+  border-bottom: 2px solid #bd935a;
+}
+#serviceCompanySwiper ul li {
+  flex-basis: 160px;
+  height: 80px;
+}
+.cooperativeProducts {
+  background-color: #fff;
+  height: 470px ;
+}
+.cooperativeProducts .cooperativeBox {
+  height: 190px;
+  overflow: hidden;
+}
+.cooperativeProducts .cooperativeBox li {
+  display: inline-block;
+  width: 160px;
+  height: 80px;
+}
+.industryField {
+  height: 100vh;
+}
+.applyForTrial {
+  position: relative;
+  height: 200px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background: url('https://cdn-www.huorong.cn/assets/v5/images/ess20/applyForTrial.png');
+  background-position: center;
+}
+.applyForTrial .container {
+  height: 100%;
+}
+.applyForTrial .hrBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 44px;
+  color: #222;
+  line-height: 44px;
+  padding: 0;
+  background-color: #efce93;
+  margin-top: -22px;
+  margin-left: -100px;
+}
+.applyForTrial .hrBtn:hover {
+  background-color: #d6ad7b;
+}
+.applyForTrial .hrBtn:active {
+  background-color: #cba168;
+}
+.realCaseWrapper .essV2Title {
+  position: relative;
+}
+.realCaseWrapper .essV2Title .more {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  font-size: 16px;
+  line-height: 40px;
+  color: #ffa924;
+  cursor: pointer;
+}
+.realCaseWrapper .essV2Title .more:hover {
+  color: #cc9845;
+}
+.realCaseWrapper .essV2Title .more:active {
+  color: #bb8c41;
+}
+.realCaseWrapper .essV2Title .more_m {
+  display: none;
+}
+.realCaseWrapper .realCaseBox {
+  padding: 0;
+}
+.toLeft {
+  font-size: 0;
+}
+.toLeft img {
+  display: inline-block;
+}
+.realCaseWrapper {
+  height: 800px;
+  background-color: #f9f9f9;
+}
+.realCaseWrapper .realCaseP {
+  display: none !important;
+}
+.realCaseWrapper .realCaseHead {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1;
+  padding: 2.9rem 0;
+}
+.realCaseWrapper #realCaseSwiper {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 540px;
+}
+.realCaseWrapper .realCaseBox {
+  height: 500px;
+  text-align: left;
+}
+.realCaseWrapper .realCaseBox:hover .realCaseDetailBtnBox .iconfont {
+  transform: translateX(10px);
+}
+.realCaseWrapper .realCaseBox .realCaseImgBox {
+  width: 100%;
+  height: 215px;
+  background-color: #fff;
+}
+.realCaseWrapper .realCaseBox .realCaseImgBox .realCaseImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.realCaseWrapper .realCaseBox .realCaseBg {
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  height: 285px;
+  width: 100%;
+}
+.realCaseWrapper .realCaseBox .realCaseTit {
+  padding: 20px 1.3rem;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.realCaseWrapper .realCaseBox .realCaseIntroduce {
+  display: -webkit-box;
+  box-sizing: border-box;
+  padding: 0 25px;
+  font-size: 16px;
+  width: 100%;
+  height: 104px;
+  line-height: 26px;
+  color: #666;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  word-break: break-all;
+  overflow: hidden;
+}
+.realCaseWrapper .realCaseBox .realCaseDetailBtnBox {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  padding-left: 1.3rem;
+  font-size: 0;
+}
+.realCaseWrapper .realCaseBox .realCaseDetailBtnBox .fontBtn {
+  display: inline-block;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+}
+.realCaseWrapper .realCaseBox .realCaseDetailBtnBox .fontBtn:hover {
+  color: #cc9845;
+}
+.realCaseWrapper .realCaseBox .realCaseDetailBtnBox .fontBtn:active {
+  color: #bb8c41;
+}
+.realCaseWrapper .realCaseBox .realCaseDetailBtnBox .iconfont {
+  transition: all 0.6s;
+  transform: translateX(0);
+  margin-left: 0.5rem;
+  vertical-align: top;
+  position: absolute;
+}
+.realCaseWrapper .arrowBtn {
+  display: block;
+  top: 242px;
+}
+.realCaseWrapper .swiper-slide {
+  overflow: visible;
+}
+.realCaseWrapper .swiper-slide:hover .realCaseBox {
+  box-shadow: 0px 0px 18px 0px #E7E7E7;
+}
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+  .fullBanner .box .essV2Msg .container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+  .cooperativeProducts {
+    height: auto;
+    padding-bottom: 4rem;
+  }
+  .cooperativeProducts .cooperativeBox {
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 870px) {
+  /*  */
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .fullBanner .box .essV2Msg .downloadFile li .iconfont {
+    font-size: 1.4rem;
+  }
+  .fullBanner .box .essV2Msg .downloadFile li span {
+    font-size: 1rem;
+  }
+  .fullBanner .box .essV2Msg .supportedSystem {
+    font-size: 1rem;
+  }
+  .head {
+    height: 70px;
+  }
+  .head .logoBox {
+    margin-top: 17px;
+    margin-left: 30px;
+  }
+  .head .webNavBtn {
+    font-size: 20px;
+    line-height: 70px;
+    margin-right: 30px;
+  }
+  .blackBg {
+    background-image: url("https://cdn-www.huorong.cn/assets/v5/images/ess20/mask_ipad.png");
+  }
+  .fullBanner .box .login .loginSubTitle {
+    font-size: 2.5rem;
+  }
+  .fullBanner .box .essV2Msg .container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+  .fullBanner .box .essV2Msg .bannerImg {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .introduceBox {
+    /* 产品功能 */
+  }
+  .introduceBox .introduce > .container {
+    padding-top: 0;
+  }
+  .introduceBox .introduce .intrBoxWrapper .container {
+    margin: 0;
+  }
+  .introduceBox .introduce .swiper-container .arrowBtn,
+  .introduceBox .introduce .pagination {
+    display: none;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper {
+    max-width: 450px;
+    width: 47%;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .msgBox {
+    width: 100% !important;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .msgBox .intrHead {
+    font-size: 1.4rem !important;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .msgBox .intrSubHead {
+    font-size: 1.2rem !important;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .msgBox .intrMsg {
+    width: auto;
+    font-size: 1rem !important;
+    line-height: 1.4rem !important;
+  }
+  .introduceBox .introduce .intrTrait {
+    margin-top: 20px;
+  }
+  .introduceBox .introduce .left .msgWrapper {
+    margin-left: 42%;
+    padding-left: 5.4rem;
+  }
+  .coreFunctions {
+    height: 43.75rem;
+  }
+  .serviceCompany {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+  }
+  .serviceCompany .essV2Title {
+    margin-top: 120px;
+    margin-bottom: 30px;
+  }
+  .serviceCompany .serviceCompanyTab {
+    margin: 1.25rem 0 1.25rem 0;
+  }
+  .cooperativeProducts {
+    height: auto;
+    padding-bottom: 4rem;
+  }
+  ul.essLogoBox {
+    height: auto !important;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .head {
+    height: 45px;
+  }
+  .head .logoBox {
+    margin-left: 14px;
+  }
+  .head .logopng {
+    width: 85px;
+    margin-top: 9px;
+  }
+  .head .webNavBtn {
+    font-size: 20px;
+    line-height: 45px;
+    margin-right: 22px;
+  }
+  .foot .companyInfo {
+    font-size: 0.8rem;
+    line-height: 1.75rem;
+  }
+  .foot .companyName {
+    margin-top: 1.9rem;
+  }
+  .foot .companyAddress {
+    font-size: 0.6rem;
+    line-height: 1.25rem;
+  }
+  .foot .contactUs {
+    line-height: 1.75rem;
+  }
+  .foot .serviceHours,
+  .foot .phoneFax {
+    line-height: 0.1rem;
+  }
+  .foot .QRcode {
+    margin-top: 1.35rem;
+  }
+  .foot .QRcode .qrCodeImgBox {
+    margin-right: 0.7rem;
+  }
+  .foot .QRcode .qrCodeName {
+    font-size: 0.6rem;
+    line-height: 1.6rem;
+  }
+  .foot .QRcode img.qrCodeImg {
+    width: 3.95rem;
+    height: 3.95rem;
+  }
+  .foot .copyrightBox {
+    margin-top: 1.25rem;
+    padding: 0.8rem 0;
+  }
+  .blackBg {
+    background-image: url("https://cdn-www.huorong.cn/assets/v5/images/ess20/mask_m.png");
+  }
+  .serviceCompanyBox .serviceCompany {
+    box-sizing: border-box;
+    padding-bottom: 1.875rem;
+  }
+  .serviceCompanyBox .serviceCompany .essV2Title {
+    margin: 6.25rem 0 0.625rem 0;
+  }
+  .serviceCompanyBox .serviceCompany .serviceCompanyTab {
+    margin: 0.625rem 0;
+    line-height: 24px;
+    height: 25px;
+  }
+  .serviceCompanyBox .serviceCompany .serviceCompanyTab li {
+    font-size: 0.875rem;
+    border-bottom: 1px solid #eee;
+  }
+  .serviceCompanyBox .serviceCompany .serviceCompanyTab li.active {
+    border-bottom: 1px solid #bd935a;
+  }
+  .essV2Title {
+    margin: 1.875rem 0;
+    margin-bottom: 0.625rem;
+    font-size: 1rem;
+    line-height: 2.1875rem;
+    height: 2.1875rem;
+    font-weight: bold;
+  }
+  .essV2Title.dack {
+    margin: 2rem 0 0.75rem 0;
+  }
+  .fullBanner .box .login .loginTitle {
+    font-size: 1.2rem;
+    top: 7.7rem;
+    line-height: 1.5rem;
+  }
+  .fullBanner .box .login .loginTitle .tip{
+    font-size: 0.76rem;
+  }
+  .fullBanner .box .login .loginSubTitle {
+    font-size: 1.4rem;
+    top: 9.6rem;
+    line-height: 2.5rem;
+  }
+  .fullBanner .box .login .loginBtnBox {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .fullBanner .box .login .loginBtnBox .btn {
+    display: block;
+  }
+  .fullBanner .box .login .loginBtnBox .btn:first-child {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .fullBanner .box .login .loginBtnBox .lineBtn {
+    width: 6.6rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    font-size: 0.875rem;
+  }
+  .fullBanner .box .login .gotoV1 {
+    font-size: 1rem;
+    top: 18.7rem;
+  }
+  .fullBanner .box .login .essV2MsgTitle {
+    box-sizing: border-box;
+    margin-top: 1.75rem;
+    padding: 0 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
+  .fullBanner .box .essV2Msg .bannerImg {
+    position: static;
+    margin: 0 auto;
+    margin-top: 4.6rem;
+    width: 80%;
+  }
+  .fullBanner .box .essV2Msg .downloadFile {
+    position: static;
+    margin-top: 0.5rem;
+    margin-bottom: 10px;
+  }
+  .fullBanner .box .essV2Msg .downloadFile li {
+    flex-basis: 50%;
+    width: 50%;
+    max-width: 50%;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    text-align: left;
+    padding-left: 10%;
+    box-sizing: border-box;
+  }
+  .fullBanner .box .essV2Msg .downloadFile li span {
+    font-size: 0.6rem;
+  }
+  .fullBanner .box .essV2Msg .downloadFile li .iconfont {
+    font-size: 1rem;
+  }
+  .fullBanner .box .essV2Msg .supportedSystem {
+    position: static;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.5rem;
+  }
+  .coreFunctions {
+    height: auto;
+    margin-top: 0;
+  }
+  .coreFunctions .coreFunWrapper {
+    align-items: stretch;
+  }
+  .coreFunctions .coreFunWrapper .coreFunbox {
+    flex-basis: 50%;
+    max-width: 50%;
+    line-height: 25px;
+    height: 12.1875rem;
+    position: relative;
+  }
+  .coreFunctions .coreFunWrapper .coreFunbox .coreFunImg {
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .coreFunctions .coreFunWrapper .coreFunbox .coreFunImg i.iconfont {
+    font-size: 2rem;
+  }
+  .coreFunctions .coreFunWrapper .coreFunbox .coreFunTitle {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .coreFunctions .coreFunWrapper .coreFunbox .coreFundetail {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .coreFunctions .coreFunWrapper .coreFunbox .coreFunBtn {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+  #serviceCompanySwiper ul li {
+    flex-basis: 50%;
+    height: 80px;
+  }
+  .cooperativeProducts {
+    margin-top: 0;
+    padding-bottom: 1.875rem;
+    height: auto;
+    border-top: 1px solid #f3f3f3;
+  }
+  .cooperativeProducts .cooperativeBox {
+    height: 400px;
+  }
+  .cooperativeProducts .cooperativeBox li {
+    flex-basis: 50%;
+    width: 50%;
+    height: 80px;
+  }
+  .industryField {
+    height: auto;
+  }
+  .applyForTrial {
+    height: 100px;
+    background: url(https://cdn-www.huorong.cn/assets/v5/images/ess20/applyForTrial_m.png);
+  }
+  .applyForTrial .hrBtn {
+    margin-top: -15px;
+    margin-left: -50px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+  }
+  .realCaseWrapper .essV2Title .more {
+    display: none;
+  }
+  .realCaseWrapper .essV2Title .more_m {
+    position: static;
+    display: inline-block;
+    font-size: 0;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #333;
+  }
+  .realCaseWrapper .essV2Title .more_m i {
+    font-size: 14px;
+  }
+  .realCaseWrapper .essV2Title .more_m:hover {
+    color: #d68a12;
+  }
+  .realCaseWrapper .essV2Title .more_m:active {
+    color: #bb8c41;
+  }
+  .realCaseWrapper .realCaseP {
+    display: none;
+  }
+  .realCaseWrapper .arrowBtn {
+    width: 18px;
+    height: 40px;
+    top: 11rem;
+  }
+  .realCaseWrapper .arrowBtn .arrow {
+    top: 14px;
+  }
+  .realCaseWrapper .arrowBtn .arrowBg {
+    font-size: 40px;
+  }
+  .realCaseWrapper #realCaseSwiper {
+    height: auto;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+  }
+  .realCaseWrapper #realCaseSwiper .swiper-wrapper {
+    height: auto;
+  }
+  .realCaseWrapper .realCaseBox {
+    width: 18.4375rem;
+    height: 26.25rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .realCaseWrapper .realCaseBox .realCaseImgBox {
+    height: 13.125rem;
+  }
+  .realCaseWrapper .realCaseBox .realCaseImgBox .realCaseImg {
+    width: 100%;
+    height: 100%;
+  }
+  .realCaseWrapper .realCaseBox .realCaseBg {
+    height: 13.125rem;
+  }
+  .realCaseWrapper .realCaseBox .realCaseBg .realCaseTit {
+    font-size: 0.875rem;
+    line-height: 2.1875rem;
+    height: 2.1875rem;
+    padding: 0.625rem 0.5rem;
+    text-align: center;
+  }
+  .realCaseWrapper .realCaseBox .realCaseBg .realCaseIntroduce {
+    height: 4.6875rem;
+    padding: 0 0.9rem;
+    font-size: 0.8125rem;
+    line-height: 1.5625rem;
+    text-align: center;
+    -webkit-line-clamp: 3;
+  }
+  .realCaseWrapper .realCaseBox .realCaseDetailBtnBox {
+    bottom: 1.875rem;
+    text-align: center;
+    padding-left: 0;
+  }
+  .realCaseWrapper .realCaseBox .realCaseDetailBtnBox .fontBtn {
+    font-size: 0.875rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
+  }
+  .realCaseWrapper .realCaseBox .realCaseDetailBtnBox .iconfont {
+    font-size: 0.7rem;
+  }
+  .introduceBox {
+    height: 200vh;
+  }
+  .introduceBox .introduce {
+    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    padding-top: 115px;
+  }
+  .introduceBox .introduce .swiper-container .arrowBtn,
+  .introduceBox .introduce .pagination {
+    display: block !important;
+  }
+  .introduceBox .introduce .swiper-container .arrowBtn {
+    top: 175px;
+    width: 18px;
+    height: 40px;
+  }
+  .introduceBox .introduce .swiper-container .arrowBtn .arrowBg {
+    font-size: 40px;
+  }
+  .introduceBox .introduce .swiper-container .arrowBtn .arrow {
+    top: 14px;
+  }
+  .introduceBox .introduce .intrBox {
+    height: auto !important;
+  }
+  .introduceBox .introduce .intrBox .container {
+    height: auto !important;
+    border: none;
+    min-height: 0;
+  }
+  .introduceBox .introduce .intrBox .container .intrImgBox {
+    position: static;
+    align-content: center;
+    justify-content: center;
+    float: none;
+    width: 18.75rem;
+    max-height: 18.75rem;
+    height: 18.75rem;
+    min-height: 0;
+  }
+  .introduceBox .introduce .intrBox .container .intrImgBox .intrImg {
+    position: static;
+    transform: none;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper {
+    position: static;
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .msgBox {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .intrHead {
+    font-size: 16px;
+    line-height: 30px;
+    color: #333;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .intrSubHead {
+    font-size: 13px;
+    line-height: 25px;
+    color: #333;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .intrMsg {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: normal;
+    text-align: left;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .intrBtn {
+    text-align: left;
+  }
+  .introduceBox .introduce .intrBox .container .msgWrapper .intrBtn .wireBtn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 0;
+    text-align: center;
+  }
+  .introduceBox .introduce #intrBoxWrapper {
+    height: auto;
+  }
+  .introduceBox .introduce #intrBoxWrapper .pagination {
+    top: 16rem;
+    bottom: auto;
+    height: 10px;
+  }
+  .introduceBox .introduce #intrBoxWrapper .swiper-pagination-switch,
+  .introduceBox .introduce #intrBoxWrapper .swiper-pagination-bullet {
+    background-position: -10px -8px;
+  }
+  .introduceBox .introduce #intrBoxWrapper .swiper-active-switch,
+  .introduceBox .introduce #intrBoxWrapper .swiper-pagination-bullet-active {
+    background-position: 0 -8px;
+  }
+  .hrBtn.wireBtn {
+    width: 6.25rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    font-size: 0.75rem;
+    padding: 0;
+    background: none;
+  }
+  .hrBtn.wireBtn:hover {
+    background-color: #ff9600;
+  }
+  .hrBtn.wireBtn:active {
+    background-color: #f17f05;
+  }
+  ul.essLogoBox {
+    margin-bottom: 20px;
+    height: 400px;
+    overflow-y: hidden;
+  }
+  .loadMore {
+    display: inline-block;
+  }
+  body.horiScreen .fullBanner .box .login {
+    margin-top: 1.5rem;
+  }
+  body.horiScreen .fullBanner .box .login .loginBtnBox {
+    margin: 0.5rem 0;
+  }
+  body.horiScreen .fullBanner .box .login .essV2MsgTitle {
+    margin-top: 1rem;
+  }
+  body.horiScreen .fullBanner .box .essV2Msg .bannerImg {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 1.7rem;
+  }
+  body.horiScreen .fullBanner .box .essV2Msg .downloadFile {
+    margin: 0.5rem 0;
+  }
+  body.horiScreen .fullBanner .box .essV2Msg .downloadFile li {
+    flex-basis: 20%;
+    width: 20%;
+    line-height: 1rem;
+    height: 1rem;
+    padding-left: 0.75rem;
+  }
+  body.horiScreen .fullBanner .box .essV2Msg .downloadFile li .iconfont {
+    font-size: 0.75rem;
+  }
+  body.horiScreen .fullBanner .box .essV2Msg .downloadFile li span {
+    font-size: 0.75rem;
+  }
+  body.horiScreen .fullBanner .box .essV2Msg .supportedSystem {
+    margin-top: 0;
+    line-height: 1rem;
+  }
+  body.horiScreen .introduceBox .introduce {
+    padding-top: 45px;
+  }
+  body.horiScreen .introduceBox .introduce .intrBox .container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  body.horiScreen .introduceBox .introduce .intrBox .container .intrImgBox {
+    float: right;
+    width: 46%;
+  }
+  body.horiScreen .introduceBox .introduce .intrBox .container .msgWrapper {
+    float: left;
+    width: 54%;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+  body.horiScreen .introduceBox .introduce .intrBox .container .msgWrapper .intrHead {
+    text-align: left;
+  }
+  body.horiScreen .coreFunctions .coreFunWrapper .coreFunbox {
+    height: 9.6rem;
+  }
+  body.horiScreen .serviceCompanyBox .serviceCompany .essV2Title {
+    margin: 3.125rem 0 0.625rem 0;
+  }
+  body.horiScreen #serviceCompanySwiper ul.essLogoBox {
+    height: 160px;
+    margin-bottom: 0;
+  }
+  body.horiScreen #serviceCompanySwiper ul.essLogoBox li {
+    flex-basis: 33.33%;
+  }
+  body.horiScreen .cooperativeProducts ul.essLogoBox li {
+    flex-basis: 33.33%;
+    width: 33.33%;
+  }
+  body.horiScreen .cooperativeProducts .intrBtn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1025px) and (orientation: landscape) {
+  .fullBanner .box .essV2Msg .bannerImg {
+    width: 36%;
+    margin: 0 auto;
+  }
+}
